@@ -2,7 +2,7 @@ package entities;
 
 import graphics.IGraphics;
 
-public abstract class ABlock implements IEntity {
+public abstract class ABlock extends Entity {
 
 	/**
 	 * Constructor for Block

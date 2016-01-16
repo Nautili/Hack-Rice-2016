@@ -1,4 +1,4 @@
-package movement;
+package entities;
 
 import java.awt.Point;
 
