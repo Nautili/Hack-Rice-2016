@@ -2,6 +2,6 @@ package movement;
 
 public interface IMovement {
 
-  public void updateLocation();
+  public void update();
 
 }
