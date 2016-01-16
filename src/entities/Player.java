@@ -15,7 +15,6 @@ public class Player extends Entity {
 
 @Override
 public IGraphics getGraphics() {
-	// TODO Auto-generated method stub
 	return null;
 }
 }
