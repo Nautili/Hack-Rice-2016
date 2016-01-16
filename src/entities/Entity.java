@@ -9,4 +9,7 @@ public class Entity {
 
   }
 
+  public LocationInfo getLocationInfo() {
+    return locationInfo;
+  }
 }

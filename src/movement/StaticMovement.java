@@ -1,12 +1,14 @@
 package movement;
 
+import entities.Entity;
+
 public class StaticMovement implements IMovement {
 
   public StaticMovement() {
 
   }
 
-  public void update() {
+  public void update(Entity entity) {
 
   }
 }
