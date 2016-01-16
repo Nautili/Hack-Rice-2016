@@ -1,4 +1,4 @@
-package entities;
+package entities.Blocks;
 
 public class WaterBlock extends ABlock {
 
