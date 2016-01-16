@@ -2,7 +2,7 @@ package dungeon;
 
 import graphics.IGraphics;
 
-public class ABlock {
+public abstract class ABlock {
 
 	/**
 	 * Constructor for Block
