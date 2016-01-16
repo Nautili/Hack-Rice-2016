@@ -13,7 +13,7 @@ public class Dungeon{
   private RoomCollection[] generateDungeon(int numRooms) {
     RoomCollection[] roomList = new RoomCollection[numRooms];
     //Get list of rooms to link together
-    File roomDir = new File("src/roomFiles");
+    File roomDir = new File("roomFiles");
     File[] fileList = roomDir.listFiles();
 
     //randomly select values from roomList
