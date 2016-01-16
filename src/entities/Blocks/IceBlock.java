@@ -1,6 +1,4 @@
-package dungeon.Blocks;
-
-import dungeon.ABlock;
+package entities.Blocks;
 
 public class IceBlock extends ABlock {
 

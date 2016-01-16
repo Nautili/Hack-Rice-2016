@@ -1,5 +1,6 @@
 package dungeon;
 
+import entities.Blocks.ABlock;
 import graphics.IGraphics;
 
 public class Map {

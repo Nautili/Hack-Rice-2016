@@ -3,7 +3,7 @@ package entities;
 import graphics.IGraphics;
 
 //Main player class
-public class Player implements IEntity {
+public class Player extends Entity {
 
   public Player() {
 
