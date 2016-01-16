@@ -18,4 +18,11 @@ public class GameView {
 	public void start(){
 		
 	}
+	/**
+	 * Test function to print string to console
+	 * @param arg the string to print
+	 */
+	public void printToConsole(String arg){
+		System.out.println(arg);
+	}
 }

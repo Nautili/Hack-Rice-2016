@@ -26,6 +26,12 @@ public class GameController {
 		
 		//Game model declaration
 		this.model = new GameModel(new Model2ViewAdapter(){
+
+			@Override
+			public void printToViewConsole(String arg) {
+				view.printToConsole(arg);
+				
+			}
 			
 		});
 	}

@@ -17,6 +17,10 @@ public class GameModel {
 	 * Starts the Game Model
 	 */
 	public void start(){
-		
+		printToViewConsole("Hello World!");
+	}
+	
+	public void printToViewConsole(String arg){
+		mainAdapter.printToViewConsole(arg);
 	}
 }
