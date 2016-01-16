@@ -2,7 +2,7 @@ package dungeon;
 
 public class Map {
 
-	private BlockCollection[][] blocks;
+	private ABlock[][] blocks;
 	
 	/**
 	 * Constructor for Map.
