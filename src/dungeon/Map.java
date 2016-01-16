@@ -2,7 +2,7 @@ package dungeon;
 
 public class Map {
 
-	private RoomCollection[][] rooms;
+	private BlockCollection[][] blocks;
 	
 	/**
 	 * Constructor for Map.
