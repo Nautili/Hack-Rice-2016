@@ -1,5 +1,7 @@
 package model;
 
+import dungeon.Dungeon;
+
 public class GameModel {
 	/**
 	 * The Model to View adapter for this model
@@ -18,6 +20,10 @@ public class GameModel {
 	 */
 	public void start(){
 		printToViewConsole("Hello World!");
+		// Create test dungeon with 1 room
+		Dungeon d = new Dungeon(1);
+		// Draw that room
+		mainAdapter.drawRoom(d.getCurrentRoom());
 	}
 
 	public void printToViewConsole(String arg){

@@ -1,5 +1,6 @@
 package controller;
 
+import dungeon.Room;
 import model.GameModel;
 import model.Model2ViewAdapter;
 import view.GameView;
@@ -30,6 +31,12 @@ public class GameController {
 			@Override
 			public void printToViewConsole(String arg) {
 				view.printToConsole(arg);
+				
+			}
+
+			@Override
+			public void drawRoom(Room currentRoom) {
+				view.drawRoom(currentRoom);
 				
 			}
 			

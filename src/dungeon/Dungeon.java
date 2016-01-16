@@ -4,14 +4,21 @@ import java.io.File;
 
 public class Dungeon{
 
-	private RoomCollection[] rooms;
+	// Should be Room[] not RoomCollection[]
+	private Room[] rooms;
+	
+	// Current room
+	private int currentRoom;
 
   public Dungeon(int numRooms) {
     rooms = generateDungeon(numRooms);
+    if(numRooms > 0) {
+    	currentRoom = 0;
+    }
   }
 
-  private RoomCollection[] generateDungeon(int numRooms) {
-    RoomCollection[] roomList = new RoomCollection[numRooms];
+  private Room[] generateDungeon(int numRooms) {
+    Room[] roomList = new Room[numRooms];
     //Get list of rooms to link together
     File roomDir = new File("roomFiles");
     File[] fileList = roomDir.listFiles();
@@ -25,5 +32,9 @@ public class Dungeon{
     }
 
     return roomList;
+  }
+  
+  public Room getCurrentRoom() {
+	  return rooms[currentRoom];
   }
 }

@@ -1,5 +1,7 @@
 package view;
 
+import dungeon.Room;
+
 public class GameView {
 	/**
 	 * The View to Model Adapter for this View
@@ -24,5 +26,10 @@ public class GameView {
 	 */
 	public void printToConsole(String arg){
 		System.out.println(arg);
+	}
+	
+	public void drawRoom(Room r) {
+		// Draw room, given graphics
+		r.getGraphics().draw();
 	}
 }
