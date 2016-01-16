@@ -1,4 +1,4 @@
-package dungeon;
+package entities;
 
 public class WallBlock extends ABlock {
 

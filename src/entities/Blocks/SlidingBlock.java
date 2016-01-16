@@ -1,4 +1,4 @@
-package dungeon;
+package entities;
 
 public class SlidingBlock extends ABlock {
 

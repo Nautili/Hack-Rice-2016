@@ -1,8 +1,8 @@
-package dungeon;
+package entities;
 
 import graphics.IGraphics;
 
-public abstract class ABlock {
+public abstract class ABlock implements IEntity {
 
 	/**
 	 * Constructor for Block
@@ -19,4 +19,8 @@ public abstract class ABlock {
 	{
 		return null;
 	}
+
+  public void update() {
+
+  }
 }
