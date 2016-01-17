@@ -26,9 +26,9 @@ public class Room {
 	}
 	public IGraphics getGraphics() {
 		// get graphics from map (blocks) and from entities
-		GraphicsCollection mapGraphics = new GraphicsCollection();
-		mapGraphics.add(map.getGraphics());
+		//GraphicsCollection mapGraphics = new GraphicsCollection();
+		//mapGraphics.add(map.getGraphics());
 		//mapGraphics.add(entities.getGraphics());
-		return mapGraphics;
+		return map.getGraphics();
 	}
 }

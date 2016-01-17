@@ -15,5 +15,6 @@ public class Entity {
   {
 	  return locationInfo.getPosition();
   }
+  
 
 }

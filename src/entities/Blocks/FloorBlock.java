@@ -21,6 +21,7 @@ public class FloorBlock extends ABlock {
   public IGraphics getGraphics() {
 	  System.out.println("");
 	  return new TileGraphics(getPosition());
+
   }
 
 }

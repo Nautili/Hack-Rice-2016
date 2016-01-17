@@ -21,11 +21,12 @@ public class TileGraphics implements IGraphics {
 	public TileGraphics(Point p) {
 		img = null;
 		try {
-		    img = ImageIO.read(new File("floor.jpg"));
+		    img = ImageIO.read(new File("floor.png"));
 		} catch (IOException e) {
 		}
 		
 		position = p;
+	
 
 	}
 	

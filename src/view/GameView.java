@@ -46,5 +46,6 @@ public class GameView extends JPanel {
 		// Draw room, given graphics
 		allGraphics = r.getGraphics();
 		repaint();
+
 	}
 }
