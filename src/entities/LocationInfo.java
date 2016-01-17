@@ -17,10 +17,6 @@ public class LocationInfo {
     this.pos = pos;
   }
 
-  public void updatePosition() {
-    pos.setLocation(pos.getX() + vel.getX(), pos.getY() + vel.getY());
-  }
-
   public Point getVelocity() {
     return vel;
   }
