@@ -11,7 +11,7 @@ public class Room {
 	 * Constructor for Room.
 	 */
 	public Room() {
-		
+
 	}
 	public IGraphics getGraphics() {
 		// get graphics from map (blocks) and from entities
