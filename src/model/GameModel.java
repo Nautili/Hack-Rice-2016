@@ -21,7 +21,7 @@ public class GameModel {
 	public void start(){
 		printToViewConsole("Hello World!");
 		// Create test dungeon with 1 room
-		Dungeon d = new Dungeon(1);
+		Dungeon d = new Dungeon();
 		// Draw that room
 		mainAdapter.drawRoom(d.getCurrentRoom());
 	}

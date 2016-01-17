@@ -9,7 +9,7 @@ public abstract class ABlock extends Entity {
 	 * Constructor for Block
 	 */
 	public ABlock() {
-
+		super();
 	}
 
 	/**
