@@ -22,6 +22,7 @@ public class Dungeon{
    */
   public Dungeon() {
 	  // For testing purposes. Create a room 
+	 rooms = new Room[1];
 	 rooms[0] = new Room(new Map(), null);
 	 currentRoom = 0; 
   }
