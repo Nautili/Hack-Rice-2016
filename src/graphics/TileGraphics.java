@@ -26,6 +26,7 @@ public class TileGraphics implements IGraphics {
 		}
 		
 		position = p;
+	
 
 	}
 	

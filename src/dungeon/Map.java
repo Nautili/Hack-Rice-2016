@@ -16,16 +16,22 @@ public class Map {
 		// Set size to 1
 		blocks = new ABlock[1][1];
 		// Floor block
-		blocks[0][0] = new FloorBlock();
+		ABlock floorBlock = new FloorBlock();
+		blocks[0][0] = floorBlock;
 	}
 	
 	public IGraphics getGraphics() {
+		/*
 		GraphicsCollection blockGraphics = new GraphicsCollection();
 		for(int x = 0; x < blocks.length; x++) {
 			for(int y = 0; y < blocks[x].length; y++) {
 				blockGraphics.add(blocks[x][y].getGraphics());
 			}
 		}
+		
 		return blockGraphics;
+		*/
+		
+		return blocks[0][0].getGraphics();
 	}
 }

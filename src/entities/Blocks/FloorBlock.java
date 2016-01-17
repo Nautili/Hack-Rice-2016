@@ -19,8 +19,8 @@ public class FloorBlock extends ABlock {
 
   @Override
   public IGraphics getGraphics() {
-	  System.out.println("Tile graphics");
-	  return new TileGraphics(getPosition());
+	  TileGraphics tile = new TileGraphics(getPosition());
+	  return tile;
   }
   
 }
