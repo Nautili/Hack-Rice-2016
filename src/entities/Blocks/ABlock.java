@@ -1,11 +1,13 @@
 package entities.Blocks;
 
+import java.awt.Image;
+
 import entities.Entity;
 import graphics.IGraphics;
 import graphics.TileGraphics;
 
 public abstract class ABlock extends Entity {
-
+	
 	/**
 	 * Constructor for Block
 	 */
@@ -23,7 +25,8 @@ public abstract class ABlock extends Entity {
 	 */
 	public IGraphics getGraphics()
 	{
-		  return new TileGraphics(getPosition());
+		System.out.println(this.getClass().getCanonicalName().replace("entities.Blocks.", "").replace("Block", "").toLowerCase());
+		  return new TileGraphics(getPosition(), this.getClass().getCanonicalName().replace("entities.Blocks.", "").replace("Block", "").toLowerCase());
 	}
 
   public void update() {

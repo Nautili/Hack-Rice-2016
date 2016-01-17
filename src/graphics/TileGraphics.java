@@ -13,20 +13,19 @@ public class TileGraphics implements IGraphics {
 
 	private BufferedImage img;
 	private Point position;
+	private String artworkLocation = "Artwork/";
 	
 	public TileGraphics() {
 		position = new Point(0,0);
 	}
 	
-	public TileGraphics(Point p) {
+	public TileGraphics(Point p, String tileName) {
 		img = null;
 		try {
-		    img = ImageIO.read(new File("floor.png"));
+		    img = ImageIO.read(new File(artworkLocation + tileName + ".png"));
 		} catch (IOException e) {
 		}
-		
 		position = p;
-	
 
 	}
 	

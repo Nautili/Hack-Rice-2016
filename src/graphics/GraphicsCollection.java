@@ -98,7 +98,10 @@ public class GraphicsCollection implements Collection<IGraphics>, IGraphics {
 	@Override
 	public void draw(Graphics g) {
 		for (IGraphics img : graphics) {
-			img.draw(g);
+			System.out.println("This is a graphic: " + img);
+			if(img != null) {
+				img.draw(g);
+			}
 		}
 		
 	}

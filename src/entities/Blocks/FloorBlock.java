@@ -21,8 +21,4 @@ public class FloorBlock extends ABlock {
 	  super(x, y);
   }
 
-  @Override
-  public IGraphics getGraphics() {
-	  return new TileGraphics(getPosition());
-  }
 }

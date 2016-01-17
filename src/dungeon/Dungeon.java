@@ -27,7 +27,7 @@ public class Dungeon{
   public Dungeon(int numRooms) {
     rooms = generateDungeon(numRooms);
     if(numRooms > 0) {
-    	currentRoom = 0;
+    	currentRoom = 1;
     }
   }
   
@@ -71,26 +71,25 @@ public class Dungeon{
     		for (int k = 0; k < roomHeight; k++) {
     		line = breader.readLine();   		
     		char[] charLine = line.toCharArray();
-    		for(int i = 0; i < line.length(); i++)
+    		for(int i = 0; i < roomWidth; i++)
     		{
     			switch(charLine[i]) {
-    				case 0: blocks[k][i] = new FloorBlock(k*TILE_SIZE, i*TILE_SIZE);
+    				case '0': blocks[k][i] = new FloorBlock(k*TILE_SIZE, i*TILE_SIZE);
     						break;
-    				case 1: blocks[k][i] = new PitBlock(k*TILE_SIZE, i*TILE_SIZE);
+    				case '1': blocks[k][i] = new PitBlock(k*TILE_SIZE, i*TILE_SIZE);
     						break;
-    				case 2: blocks[k][i] = new PushBlock(k*TILE_SIZE, i*TILE_SIZE);
+    				case '2': blocks[k][i] = new PushBlock(k*TILE_SIZE, i*TILE_SIZE);
     						break;
-    				case 3: blocks[k][i] = new WallBlock(k*TILE_SIZE, i*TILE_SIZE);
+    				case '3': blocks[k][i] = new WallBlock(k*TILE_SIZE, i*TILE_SIZE);
     						break;
-    				case 4: blocks[k][i] = new FloorBlock(k*TILE_SIZE, i*TILE_SIZE);
+    				case '4': blocks[k][i] = new FloorBlock(k*TILE_SIZE, i*TILE_SIZE);
     						entities.add(new Player(k*TILE_SIZE,i*TILE_SIZE));
     				default: break;	
     			}
-    		}
-    			
+    		}	
     	}
     	
-        //add to room list    	
+        //add to room list
     	roomList[numRoomsAdded] = new Room(new Map(blocks), entities);
     	numRoomsAdded++;
     	System.out.println("Added room " + numRoomsAdded);
