@@ -3,8 +3,5 @@ Hack Rice 2016 (Title pending)
 Authors: Lee Chen, Sarah Kim, Ryan Lear
 Last Modified: 1/16/2016
 
-How to run:
-(Command line parameters)
-
-Game Instructions:
-(Controls, basic rules)
+The idea of the game was a zelda clone with random user-generated floors. We aimed to make an in game editor once the framework was created. As it stands, this code is a very fancy "Hello World" program. With that said, there is some nice artwork for your viewing pleasure.
+The system was built with an entity-component-system in mind to make it easy to create different types of blocks and items quickly. Most classes are not filled out in any meaningful way, but the structure is there. We plan to work on this after the hackathon, but we really like sleep.
