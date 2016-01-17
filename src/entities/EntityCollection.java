@@ -1,5 +1,6 @@
 package entities;
 
+import java.awt.Graphics;
 import java.util.Collection;
 import java.util.Iterator;
 
@@ -13,7 +14,7 @@ public class EntityCollection implements Collection<Entity>, IGraphics {
 	}
 
 	@Override
-	public void draw() {
+	public void draw(Graphics g) {
 		// TODO Auto-generated method stub
 		
 	}
