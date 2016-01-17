@@ -16,6 +16,8 @@ import entities.Blocks.WallBlock;
 
 public class Dungeon{
 
+	private int TILE_SIZE = 16;
+	
 	// Should be Room[] not RoomCollection[]
 	private Room[] rooms;
 	
@@ -60,6 +62,8 @@ public class Dungeon{
     		int roomHeight = Integer.parseInt(dimensions[0]);
     		int roomWidth = Integer.parseInt(dimensions[1]);
     		
+    		System.out.println(roomHeight + "x" + roomWidth);
+    		
     		String line;
     		ABlock[][] blocks = new ABlock[roomHeight][roomWidth];
     		EntityCollection entities = new EntityCollection();
@@ -70,16 +74,16 @@ public class Dungeon{
     		for(int i = 0; i < line.length(); i++)
     		{
     			switch(charLine[i]) {
-    				case 0: blocks[k][i] = new FloorBlock(k, i);
+    				case 0: blocks[k][i] = new FloorBlock(k*TILE_SIZE, i*TILE_SIZE);
     						break;
-    				case 1: blocks[k][i] = new PitBlock(k, i);
+    				case 1: blocks[k][i] = new PitBlock(k*TILE_SIZE, i*TILE_SIZE);
     						break;
-    				case 2: blocks[k][i] = new PushBlock(k, i);
+    				case 2: blocks[k][i] = new PushBlock(k*TILE_SIZE, i*TILE_SIZE);
     						break;
-    				case 3: blocks[k][i] = new WallBlock(k, i);
+    				case 3: blocks[k][i] = new WallBlock(k*TILE_SIZE, i*TILE_SIZE);
     						break;
-    				case 4: blocks[k][i] = new FloorBlock(k, i);
-    						entities.add(new Player(k,i));
+    				case 4: blocks[k][i] = new FloorBlock(k*TILE_SIZE, i*TILE_SIZE);
+    						entities.add(new Player(k*TILE_SIZE,i*TILE_SIZE));
     				default: break;	
     			}
     		}
@@ -90,6 +94,9 @@ public class Dungeon{
     	roomList[numRoomsAdded] = new Room(new Map(blocks), entities);
     	numRoomsAdded++;
     	System.out.println("Added room " + numRoomsAdded);
+    	if(numRoomsAdded == numRooms) {
+    		break;
+    	}
     }catch (IOException i) {
     	
     }
