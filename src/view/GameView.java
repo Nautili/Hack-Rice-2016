@@ -1,11 +1,14 @@
 package view;
 
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+
 import graphics.IGraphics;
 import javax.swing.JFrame;
 
 import dungeon.Room;
 
-public class GameView {
+public class GameView implements KeyListener{
 	/**
 	 * The View to Model Adapter for this View
 	 */	
@@ -47,5 +50,34 @@ public class GameView {
 		// Draw room, given graphics
 		gamePanel.setGraphics(r.getGraphics());
 		gamePanel.repaint();
+	}
+	
+	@Override
+	public void keyTyped(KeyEvent e) {
+		if(e.getKeyCode() == KeyEvent.VK_UP) {
+			gamePanel.repaint();
+		}
+		else if(e.getKeyCode() == KeyEvent.VK_LEFT) {
+			gamePanel.repaint();
+		}
+		else if(e.getKeyCode() == KeyEvent.VK_RIGHT) {
+			gamePanel.repaint();
+		}
+		else if(e.getKeyCode() == KeyEvent.VK_DOWN) {
+			gamePanel.repaint();
+		}
+		
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }

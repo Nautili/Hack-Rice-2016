@@ -29,4 +29,5 @@ public class GameModel {
 	public void printToViewConsole(String arg){
 		mainAdapter.printToViewConsole(arg);
 	}
+	
 }

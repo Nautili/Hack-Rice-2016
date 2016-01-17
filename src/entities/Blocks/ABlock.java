@@ -25,8 +25,7 @@ public abstract class ABlock extends Entity {
 	 */
 	public IGraphics getGraphics()
 	{
-		System.out.println(this.getClass().getCanonicalName().replace("entities.Blocks.", "").replace("Block", "").toLowerCase());
-		  return new TileGraphics(getPosition(), this.getClass().getCanonicalName().replace("entities.Blocks.", "").replace("Block", "").toLowerCase());
+		return new TileGraphics(getPosition(), this.getClass().getCanonicalName().replace("entities.Blocks.", "").replace("Block", "").toLowerCase());
 	}
 
   public void update() {

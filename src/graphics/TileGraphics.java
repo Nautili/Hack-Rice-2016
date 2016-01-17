@@ -31,7 +31,7 @@ public class TileGraphics implements IGraphics {
 	
 	@Override
 	public void draw(Graphics g) {
-		g.drawImage(img, position.x, position.y, null);
+		g.drawImage(img.getScaledInstance(img.getWidth()*4, img.getHeight()*4, Image.SCALE_DEFAULT), position.x, position.y, null);
 	}
 	
 }

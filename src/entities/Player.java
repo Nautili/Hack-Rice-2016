@@ -17,10 +17,8 @@ public class Player extends Entity {
   }
 
   public void update() {
+	  
 
   }
 
-  public IGraphics getGraphics() {
-    return null;
-  }
 }

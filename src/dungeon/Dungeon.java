@@ -9,14 +9,17 @@ import entities.Entity;
 import entities.EntityCollection;
 import entities.Player;
 import entities.Blocks.ABlock;
+import entities.Blocks.ButtonBlock;
+import entities.Blocks.ExitBlock;
 import entities.Blocks.FloorBlock;
 import entities.Blocks.PitBlock;
 import entities.Blocks.PushBlock;
 import entities.Blocks.WallBlock;
+import entities.Blocks.WaterBlock;
 
 public class Dungeon{
 
-	private int TILE_SIZE = 16;
+	private int TILE_SIZE = 64;
 	
 	// Should be Room[] not RoomCollection[]
 	private Room[] rooms;
@@ -27,7 +30,7 @@ public class Dungeon{
   public Dungeon(int numRooms) {
     rooms = generateDungeon(numRooms);
     if(numRooms > 0) {
-    	currentRoom = 1;
+    	currentRoom = 0;
     }
   }
   
@@ -74,17 +77,38 @@ public class Dungeon{
     		for(int i = 0; i < roomWidth; i++)
     		{
     			switch(charLine[i]) {
+    				// Floor
     				case '0': blocks[k][i] = new FloorBlock(k*TILE_SIZE, i*TILE_SIZE);
     						break;
+    						
+    				// Water
     				case '1': blocks[k][i] = new PitBlock(k*TILE_SIZE, i*TILE_SIZE);
     						break;
+    				
+    				// Push
     				case '2': blocks[k][i] = new PushBlock(k*TILE_SIZE, i*TILE_SIZE);
     						break;
-    				case '3': blocks[k][i] = new WallBlock(k*TILE_SIZE, i*TILE_SIZE);
+    						
+    				// Wall
+    				case '3': blocks[k][i] = new ExitBlock(k*TILE_SIZE, i*TILE_SIZE);
     						break;
+    						
+    				// Player
     				case '4': blocks[k][i] = new FloorBlock(k*TILE_SIZE, i*TILE_SIZE);
     						entities.add(new Player(k*TILE_SIZE,i*TILE_SIZE));
-    				default: break;	
+    						break;
+    					
+    				// Button
+    				case '5': blocks[k][i] = new ButtonBlock(k*TILE_SIZE, i+TILE_SIZE);
+    						break;
+    						
+    				// Pit
+    				case '6': blocks[k][i] = new WaterBlock(k*TILE_SIZE, i*TILE_SIZE);
+    						break;
+    						
+    						
+    				default: break;			
+
     			}
     		}	
     	}
