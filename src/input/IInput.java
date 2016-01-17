@@ -1,4 +1,4 @@
-package input;
+package entities;
 
 public interface IInput {
 
