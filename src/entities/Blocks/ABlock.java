@@ -2,6 +2,7 @@ package entities.Blocks;
 
 import entities.Entity;
 import graphics.IGraphics;
+import graphics.TileGraphics;
 
 public abstract class ABlock extends Entity {
 
@@ -11,6 +12,10 @@ public abstract class ABlock extends Entity {
 	public ABlock() {
 		super();
 	}
+	
+	public ABlock(int x, int y) {
+		super(x, y);
+	}
 
 	/**
 	 * Get block graphics.
@@ -18,7 +23,7 @@ public abstract class ABlock extends Entity {
 	 */
 	public IGraphics getGraphics()
 	{
-		return null;
+		  return new TileGraphics(getPosition());
 	}
 
   public void update() {

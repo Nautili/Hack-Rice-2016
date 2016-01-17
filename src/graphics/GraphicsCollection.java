@@ -14,6 +14,10 @@ public class GraphicsCollection implements Collection<IGraphics>, IGraphics {
 
 	private Vector<IGraphics> graphics;
 	
+	public GraphicsCollection() {
+		graphics = new Vector<IGraphics>();
+	}
+	
 	@Override
 	public int size() {
 		// TODO Auto-generated method stub

@@ -20,8 +20,11 @@ public class Map {
 		blocks[0][0] = floorBlock;
 	}
 	
+	public Map(ABlock[][] blocks) {
+		this.blocks = blocks;
+	}
+	
 	public IGraphics getGraphics() {
-		/*
 		GraphicsCollection blockGraphics = new GraphicsCollection();
 		for(int x = 0; x < blocks.length; x++) {
 			for(int y = 0; y < blocks[x].length; y++) {
@@ -30,8 +33,5 @@ public class Map {
 		}
 		
 		return blockGraphics;
-		*/
-		
-		return blocks[0][0].getGraphics();
 	}
 }

@@ -16,10 +16,13 @@ public class FloorBlock extends ABlock {
   public FloorBlock() {
 	  super();
   }
+  
+  public FloorBlock(int x, int y) {
+	  super(x, y);
+  }
 
   @Override
   public IGraphics getGraphics() {
-	  System.out.println("");
 	  return new TileGraphics(getPosition());
   }
 }

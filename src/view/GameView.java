@@ -1,20 +1,20 @@
 package view;
 
 import graphics.IGraphics;
-
-import java.awt.Graphics;
-
-import javax.swing.JPanel;
+import javax.swing.JFrame;
 
 import dungeon.Room;
 
-public class GameView extends JPanel {
+public class GameView {
 	/**
 	 * The View to Model Adapter for this View
-	 */
+	 */	
 	private View2ModelAdapter mainAdapter;
 	
-	private IGraphics allGraphics;
+	private JFrame gameFrame;
+	
+	private GamePanel gamePanel;
+	
 	
 	/**
 	 * Constructor this GameView
@@ -27,8 +27,14 @@ public class GameView extends JPanel {
 	 * Starts the Game View
 	 */
 	public void start(){
-		
+		gameFrame = new JFrame("Tri-Cheese");
+		gamePanel = new GamePanel();
+		gameFrame.add(gamePanel);
+		gameFrame.setSize(300,300);
+		gameFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		gameFrame.setVisible(true);
 	}
+	
 	/**
 	 * Test function to print string to console
 	 * @param arg the string to print
@@ -36,16 +42,10 @@ public class GameView extends JPanel {
 	public void printToConsole(String arg){
 		System.out.println(arg);
 	}
-	
-	protected void paintComponent(Graphics g) {
-		super.paintComponent(g);
-		allGraphics.draw(g);
-	}
-	
+		
 	public void drawRoom(Room r) {
 		// Draw room, given graphics
-		allGraphics = r.getGraphics();
-		repaint();
-
+		gamePanel.setGraphics(r.getGraphics());
+		gamePanel.repaint();
 	}
 }
