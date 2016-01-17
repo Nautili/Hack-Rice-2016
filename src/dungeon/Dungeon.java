@@ -16,6 +16,15 @@ public class Dungeon{
     	currentRoom = 0;
     }
   }
+  
+  /**
+   * Test constructor
+   */
+  public Dungeon() {
+	  // For testing purposes. Create a room 
+	 rooms[0] = new Room(new Map(), null);
+	 currentRoom = 0; 
+  }
 
   private Room[] generateDungeon(int numRooms) {
     Room[] roomList = new Room[numRooms];
