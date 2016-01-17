@@ -12,15 +12,15 @@ import graphics.TileGraphics;
 
 public class FloorBlock extends ABlock {
 
-	
+
   public FloorBlock() {
 	  super();
   }
 
   @Override
   public IGraphics getGraphics() {
-	  System.out.println("")
+	  System.out.println("");
 	  return new TileGraphics(getPosition());
   }
-  
+
 }

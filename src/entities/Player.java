@@ -13,8 +13,7 @@ public class Player extends Entity {
 
   }
 
-@Override
-public IGraphics getGraphics() {
-	return null;
-}
+  public IGraphics getGraphics() {
+    return null;
+  }
 }
